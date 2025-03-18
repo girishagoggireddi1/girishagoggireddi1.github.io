@@ -27,5 +27,5 @@ Feel free to reach out if you have any questions or would like to collaborate.
 ## Connect With Me
 
 - [GitHub](https://github.com/yourusername)
-- [LinkedIn](https://www.linkedin.com/in/ishan-kakodkar/)
+- [LinkedIn](https://www.linkedin.com/in/ishan-kakodkar)
 
