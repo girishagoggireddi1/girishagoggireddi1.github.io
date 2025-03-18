@@ -6,9 +6,9 @@ permalink: /about/
 
 # About Me
 
-![Your Photo](assets/images/profile.jpg)
+lipss
 
-I'm a [your profession] with [X years] of experience in [your industry]. I'm passionate about [your interests].
+I'm a lazy person. thanks
 
 ## Skills
 
