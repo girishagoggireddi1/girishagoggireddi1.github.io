@@ -1,0 +1,9 @@
+title: Your Name
+description: Web Developer & Designer
+url: "https://username.github.io"
+theme: minima
+permalink: /:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
