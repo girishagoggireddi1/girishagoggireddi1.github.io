@@ -3,18 +3,14 @@ layout: home
 title: Home
 ---
 
-# Hello, I'm Ishan Kakodkar
+# Hello, I'm LIPS
 
-I'm a [your profession] specializing in [your skills]. Welcome to my portfolio and blog.
+I'm a lazy person specializing in procrastination. Welcome to my portfolio and blog.
 
 ## Latest Projects
 
-{% for project in site.projects limit:3 %}
-- [{{ project.title }}]({{ project.url }})
-{% endfor %}
+I AM THE PROJECT
 
 ## Recent Posts
 
-{% for post in site.posts limit:3 %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}
+
