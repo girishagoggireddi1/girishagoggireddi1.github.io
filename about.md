@@ -12,20 +12,17 @@ I'm a lazy person. thanks
 
 ## Skills
 
-- Skill 1
-- Skill 2
-- Skill 3
+-Professional Sleeper
+-Yapping
 
 ## Experience
 
 ### Company Name (Year - Year)
-- Accomplishment 1
-- Accomplishment 2
+- i give good company
 
 ### Previous Company (Year - Year)
-- Accomplishment 1
-- Accomplishment 2
+- bad company
 
 ## Education
 
-**Degree** - University Name, Year
+**Degree** - GOLD MEDALIST WHY YOU WANT TO KNOW 
