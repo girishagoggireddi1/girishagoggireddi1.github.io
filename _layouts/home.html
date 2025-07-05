@@ -4,13 +4,36 @@ layout: default
 
 <div class="hero-section">
   <div class="container">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <div class="hero-buttons">
-      <a href="/projects" class="btn btn-primary">View My Work</a>
-      <a href="/contact" class="btn btn-secondary">Get In Touch</a>
+    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+      <img src="/assets/profile-placeholder.png" alt="Profile Photo" class="profile-photo" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.12); border: 4px solid #fff; margin-bottom: 1rem;">
+      <h1>{{ site.title }}</h1>
+      <p style="max-width: 600px; font-size: 1.2rem; margin-bottom: 1.5rem;">Welcome to my professional portfolio. I am passionate about technology, innovation, and delivering impactful solutions. Explore my work, skills, and experience below.</p>
+      <div class="hero-buttons" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="/projects" class="btn btn-primary">View My Work</a>
+        <a href="/contact" class="btn btn-secondary">Get In Touch</a>
+        {% if site.show_resume_button != false %}
+        <a href="/resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+        {% endif %}
+      </div>
+      <div class="social-icons" style="display: flex; gap: 1.2rem; margin-top: 1.2rem; justify-content: center;">
+        <a href="http://www.linkedin.com/in/girisha-goggireddi" target="_blank" title="LinkedIn" style="font-size: 2rem; color: #0A66C2;"><i class="fab fa-linkedin"></i> <span class="sr-only">LinkedIn</span></a>
+        <a href="https://github.com/girishagoggireddi1/girishagoggireddi1.github.io" target="_blank" title="GitHub" style="font-size: 2rem; color: #333;"><i class="fab fa-github"></i> <span class="sr-only">GitHub</span></a>
+        <a href="mailto:lipikareddi@gmail.com" title="Email" style="font-size: 2rem; color: #EA4335;"><i class="fas fa-envelope"></i> <span class="sr-only">Email</span></a>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- About Section -->
+<div class="about-section" style="max-width: 900px; margin: 0 auto 4rem auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); padding: 2.5rem 2rem;">
+  <h2 style="margin-top: 0;">About Me</h2>
+  <p style="font-size: 1.15rem; line-height: 1.8;">
+    I'm a recent MBA graduate from Stevens Institute of Technology, where I focused on Analytics, Finance, and Strategy. I love helping organizations make smarter decisions with data, especially as they navigate AI and digital transformation.<br><br>
+    I have nearly two years of experience as a Business Analyst at Inture Software, where I worked on financial analysis, forecasting, and building dashboards that made complex data easy to understand. At MyCaptain, I created Power BI dashboards and launched campaigns that boosted leads and revenue.<br><br>
+    During my MBA, I worked as an MBA Consultant at Whitestone Analytics, where I led a project to reduce M&A research costs using better tech solutions. I also worked as a Teaching Assistant for Strategy courses, where I helped students dive into competitive and innovation frameworks and grew my own skills along the way. I graduated with a 3.9 GPA, earned a GMAT score of 730, and received a Provost Scholarship for academic excellence.<br><br>
+    I'm skilled in SQL, Python, Excel, Tableau, Power BI, and financial modeling, and I'm passionate about combining data with business strategy to create real impact. I'm a member of Beta Gamma Sigma and the Graduate Consulting Club, and I'm currently exploring opportunities in finance, strategy, business analysis, or consulting.<br><br>
+    If you're hiring or just want to chat about business, finance, or tech, I'd love to connect!
+  </p>
 </div>
 
 <div class="container" style="padding: 5rem 0;">
@@ -41,10 +64,31 @@ layout: default
     <div class="section-heading">
       <h2>My Skills</h2>
     </div>
-    
-    <div class="row">
-      
-        </div>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="skill-icon">💻</div>
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-icon">🌐</div>
+        <div class="skill-name">Web Development</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-icon">⚙️</div>
+        <div class="skill-name">Automation</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Data Analysis</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">Cloud</div>
+        <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
       </div>
     </div>
   </div>
