@@ -6,7 +6,7 @@ permalink: /advanced-dashboard/
 
 # Advanced Business Analytics Dashboard
 
-This interactive dashboard mimics a Power BI experience: filter by segment and month, and see all charts update instantly. Explore revenue, profit, churn, and top customers with rich visuals and interactivity—all in your browser!
+This interactive dashboard combines Power BI-style visuals with SQL querying. Write a SQL query on the sample business data below—KPIs and charts will update based on your query!
 
 ---
 
@@ -50,17 +50,6 @@ This interactive dashboard mimics a Power BI experience: filter by segment and m
   flex: 1 1 350px;
   min-width: 320px;
 }
-.slicer {
-  margin-bottom: 1em;
-}
-.slicer label {
-  font-weight: 600;
-  margin-right: 0.5em;
-}
-.slicer select {
-  min-width: 120px;
-  margin-right: 1em;
-}
 .narrative {
   background: #f1f5f9;
   border-radius: 12px;
@@ -70,29 +59,43 @@ This interactive dashboard mimics a Power BI experience: filter by segment and m
   color: #334155;
   box-shadow: 0 2px 8px rgba(99,102,241,0.06);
 }
+.sql-box {
+  margin-bottom: 1.5em;
+}
+.sql-box textarea {
+  width: 100%;
+  font-family: monospace;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 0.5em;
+}
+.sql-box button {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 1em;
+}
+.sql-box button:hover {
+  background: #3b82f6;
+}
 </style>
 
-<div class="kpi-cards" id="kpi-cards"></div>
-
-<div class="slicer">
-  <label for="segment-filter">Segment:</label>
-  <select id="segment-filter" multiple size="4">
-    <option value="Enterprise">Enterprise</option>
-    <option value="SMB">SMB</option>
-    <option value="Startup">Startup</option>
-    <option value="Individual">Individual</option>
-  </select>
-  <label for="month-filter">Month:</label>
-  <select id="month-filter" multiple size="6">
-    <option value="Jan">Jan</option>
-    <option value="Feb">Feb</option>
-    <option value="Mar">Mar</option>
-    <option value="Apr">Apr</option>
-    <option value="May">May</option>
-    <option value="Jun">Jun</option>
-  </select>
-  <button onclick="updateDashboard()" style="margin-left:1em;">Apply Filters</button>
+<div class="sql-box">
+  <label for="sql-input"><b>SQL Query:</b></label><br>
+  <textarea id="sql-input" rows="3">SELECT * FROM customers;</textarea><br>
+  <button onclick="runSQL()">Run Query</button>
+  <span id="sql-error" style="color:red;"></span>
 </div>
+
+<div id="sql-results"></div>
+
+<div class="kpi-cards" id="kpi-cards"></div>
 
 <div class="dashboard-grid">
   <div class="dashboard-cell" id="revenue-bar"></div>
@@ -105,10 +108,11 @@ This interactive dashboard mimics a Power BI experience: filter by segment and m
 
 <div class="narrative" id="narrative"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
-// Sample data
-const data = [
+let db, lastResult = null;
+const baseData = [
   {id:1, name:'Acme Corp', segment:'Enterprise', revenue:12000, churn_risk:'High', month:'Jan', profit:3000},
   {id:2, name:'Beta LLC', segment:'SMB', revenue:10500, churn_risk:'Medium', month:'Jan', profit:2500},
   {id:3, name:'Gamma Inc', segment:'Startup', revenue:9800, churn_risk:'Low', month:'Feb', profit:2200},
@@ -121,18 +125,58 @@ const data = [
   {id:10, name:'Kappa Ltd', segment:'Individual', revenue:5000, churn_risk:'Loyal', month:'Jun', profit:1200}
 ];
 
-function getSelectedValues(selectId) {
-  const sel = document.getElementById(selectId);
-  return Array.from(sel.selectedOptions).map(opt => opt.value);
+initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/${file}` }).then(SQL => {
+  db = new SQL.Database();
+  db.run(`CREATE TABLE customers (id INTEGER, name TEXT, segment TEXT, revenue INTEGER, churn_risk TEXT, month TEXT, profit INTEGER);`);
+  baseData.forEach(row => {
+    db.run(`INSERT INTO customers VALUES (?, ?, ?, ?, ?, ?, ?);`, [row.id, row.name, row.segment, row.revenue, row.churn_risk, row.month, row.profit]);
+  });
+  runSQL();
+});
+
+function runSQL() {
+  const sql = document.getElementById('sql-input').value;
+  let html = '';
+  let error = '';
+  try {
+    const res = db.exec(sql);
+    lastResult = res;
+    if (res.length > 0) {
+      html += '<table border=1 style="border-collapse:collapse;width:100%"><tr>';
+      res[0].columns.forEach(col => html += `<th style=\"background:#f1f5f9;padding:4px;\">${col}</th>`);
+      html += '</tr>';
+      res[0].values.forEach(row => {
+        html += '<tr>';
+        row.forEach(val => html += `<td style=\"padding:4px;\">${val}</td>`);
+        html += '</tr>';
+      });
+      html += '</table>';
+    } else {
+      html = 'Query executed. No results to display.';
+    }
+    document.getElementById('sql-error').innerText = '';
+  } catch (e) {
+    html = '';
+    error = e.message;
+    lastResult = null;
+  }
+  document.getElementById('sql-results').innerHTML = html;
+  document.getElementById('sql-error').innerText = error;
+  updateDashboard();
 }
 
-function filterData() {
-  const segs = getSelectedValues('segment-filter');
-  const mons = getSelectedValues('month-filter');
-  return data.filter(row =>
-    (segs.length === 0 || segs.includes(row.segment)) &&
-    (mons.length === 0 || mons.includes(row.month))
-  );
+function getDataFromResult() {
+  // If lastResult is a SELECT * FROM customers or similar, convert to array of objects
+  if (!lastResult || lastResult.length === 0) return [];
+  const cols = lastResult[0].columns;
+  const vals = lastResult[0].values;
+  // Only use if all base columns are present
+  const baseCols = ['id','name','segment','revenue','churn_risk','month','profit'];
+  if (baseCols.every(c => cols.includes(c))) {
+    return vals.map(row => Object.fromEntries(cols.map((c,i) => [c, row[i]])));
+  }
+  // Otherwise, return empty (charts/KPIs won't update)
+  return [];
 }
 
 function updateKPI(filtered) {
@@ -155,7 +199,7 @@ function updateKPI(filtered) {
 
 function updateNarrative(filtered) {
   if (filtered.length === 0) {
-    document.getElementById('narrative').innerText = 'No data for the selected filters.';
+    document.getElementById('narrative').innerText = 'No data for the current SQL query.';
     return;
   }
   // Top segment by revenue
@@ -181,7 +225,16 @@ function updateNarrative(filtered) {
 }
 
 function updateDashboard() {
-  const filtered = filterData();
+  const filtered = getDataFromResult();
+  if (filtered.length === 0) {
+    document.getElementById('kpi-cards').innerHTML = '';
+    document.getElementById('revenue-bar').innerHTML = '';
+    document.getElementById('churn-pie').innerHTML = '';
+    document.getElementById('profit-line').innerHTML = '';
+    document.getElementById('top-customers').innerHTML = '';
+    document.getElementById('narrative').innerText = 'No data for the current SQL query.';
+    return;
+  }
   updateKPI(filtered);
   updateNarrative(filtered);
 
@@ -244,23 +297,15 @@ function updateDashboard() {
   html += '</table>';
   document.getElementById('top-customers').innerHTML = html;
 }
-
-// Pre-select all options by default
-window.onload = function() {
-  const segSel = document.getElementById('segment-filter');
-  for (let i=0; i<segSel.options.length; i++) segSel.options[i].selected = true;
-  const monSel = document.getElementById('month-filter');
-  for (let i=0; i<monSel.options.length; i++) monSel.options[i].selected = true;
-  updateDashboard();
-};
 </script>
 
 ---
 
 **How this works:**
-- KPI cards, multi-select filters, and narrative insights for a true Power BI feel
-- All charts and tables update instantly when you change filters
+- Write a SQL query to filter or aggregate the data (e.g., `SELECT * FROM customers WHERE segment = 'Enterprise';`)
+- If your query returns all the main columns, the dashboard will update; otherwise, only the table will show
+- KPI cards, charts, and insights update based on your query result
 - Data is in-browser for demo purposes, but you can connect to a real backend in a dynamic app
-- Built with Plotly.js for rich, interactive analytics
+- Built with sql.js and Plotly.js for rich, interactive analytics
 
-If you want to add more visuals, filters, or features, just ask! 
+If you want to add more visuals, features, or custom SQL logic, just ask! 
