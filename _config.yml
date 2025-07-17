@@ -26,5 +26,9 @@ nav_links:
     url: /projects/
   - title: Blog
     url: /blog/
+  - title: Advanced Dashboard
+    url: /advanced-dashboard/
+  - title: SQL Dashboard
+    url: /sql-dashboard/
   - title: Contact
     url: /contact/
