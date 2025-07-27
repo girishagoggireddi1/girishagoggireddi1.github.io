@@ -111,6 +111,37 @@ nav a:hover {
   transform: translateY(-6px) scale(1.03);
   border-left: 6px solid var(--accent-color);
 }
+
+/* Project Grid Styles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.project-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow-light);
+  padding: 1.8rem;
+  transition: box-shadow 0.3s, transform 0.2s;
+  border-left: 6px solid var(--primary-color);
+}
+.project-card:hover {
+  box-shadow: var(--shadow-heavy);
+  transform: translateY(-6px) scale(1.02);
+  border-left: 6px solid var(--accent-color);
+}
+.project-card .card-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.project-card .tech-stack {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-style: italic;
+}
 .cta {
   margin: 2.5rem 0 1.5rem 0;
   text-align: center;
