@@ -1,0 +1,19 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node and Ruby dependencies
+node_modules/
+.bundle/
+.sass-cache/
+
+# Ignore build artifacts
+_site/
+.jekyll-cache/
+*.log
+*.tmp
+*.swp
+
+# Ignore deployment config
+windsurf_deployment.yaml
+netlify.toml
