@@ -1,7 +1,7 @@
 title: Girisha Goggireddi
 description: MBA | Business Analyst | Data & Strategy Enthusiast
 url: "https://girishagoggireddi1.github.io"
-theme: minima
+
 permalink: /:title/
 
 plugins:
