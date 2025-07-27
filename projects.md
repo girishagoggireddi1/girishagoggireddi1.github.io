@@ -4,23 +4,36 @@ title: Projects
 permalink: /projects/
 ---
 
-# My Projects
+# Projects Portfolio
 
-Here are some of the key projects I've worked on that demonstrate my skills in data analysis, business intelligence, and strategic consulting.
+A showcase of key projects demonstrating expertise in data analytics, business intelligence, and strategic consulting.
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; color: white; text-align: center;">
+  <h2 style="color: white; margin-bottom: 0.5rem;">Professional Impact</h2>
+  <p style="font-size: 1.1rem; margin: 0;">Delivering data-driven solutions that drive business growth and operational efficiency</p>
+</div>
 
 ## Featured Projects
 
-### Financial Forecasting Dashboard
+<div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
+
+### 📊 Financial Forecasting Dashboard
 **Duration**: 6 months | **Role**: Lead Developer  
 **Technologies**: Power BI, Excel, SQL, DAX
 
-Developed a comprehensive financial forecasting dashboard for executive leadership that transformed complex financial data into actionable insights. The dashboard included:
+Developed a comprehensive financial forecasting dashboard for executive leadership that transformed complex financial data into actionable insights.
+
+**Key Features:**
 - Real-time revenue and expense tracking
 - Automated forecasting models with 95% accuracy
 - Interactive drill-down capabilities for detailed analysis
 - Executive summary views for quick decision-making
 
-**Impact**: Reduced financial reporting time by 70% and improved forecast accuracy by 25%.
+<div style="background: #f0f9ff; padding: 1rem; border-radius: 8px; border-left: 3px solid #0ea5e9;">
+<strong>📈 Impact:</strong> Reduced financial reporting time by 70% and improved forecast accuracy by 25%
+</div>
+
+</div>
 
 ---
 
@@ -80,24 +93,23 @@ Conducted comprehensive market analysis for a Fortune 500 company entering new m
 
 ## Academic Projects
 
-### MBA Capstone: Digital Transformation Strategy
-**Duration**: 6 months | **Role**: Team Lead  
-**Technologies**: Strategic Frameworks, Financial Modeling, Data Analysis
+### Power BI-Style SQL Analytics Dashboard | Python, SQL
+- Built an interactive dashboard with real-time SQL querying and dynamic data visualizations using Plotly.js and sql.js.
+- Enabled users to explore business KPIs, trends, and customer insights through custom SQL queries and responsive charts.
+- Delivered a seamless, single-page analytics experience deployable on GitHub Pages
 
-Led a team of 4 MBA students in developing a comprehensive digital transformation strategy for a mid-sized manufacturing company. The project included:
-- Current state assessment and gap analysis
-- Technology roadmap development
-- Change management strategy
-- ROI analysis and implementation timeline
+### Customer Retention Strategy for SaaS Startup | Agile/Scrum
+- Developed a customer retention strategy for a SaaS startup using solo Scrum, completing 2 sprints in 20 hours.
+- Analyzed churn with SQL and Power BI, proposed retention tactics, and modeled ROI in Excel, delivering a 10-slide PowerPoint deck and 5-page report.
 
-**Outcome**: Received highest grade in the class and the strategy was adopted by the client company.
+### Dropbox Valuation | Excel, DCF, Beta
+- Valued Dropbox using Excel-based financial models, including discounted cash flow and beta estimation.
+- Applied finance concepts to assess the company’s intrinsic value and test different assumptions through sensitivity analysis.
 
-### Teaching Assistant: Strategy Course Development
-**Duration**: 2 semesters | **Role**: Teaching Assistant  
-**Technologies**: Educational Technology, Case Study Development
-
-Assisted in developing and delivering strategy courses, including:
-- Creating interactive case studies
+### Portfolio Management Game | Investment Management Course
+- Acted as Chief Risk Officer for a student-run portfolio simulation based on Goldman Sachs' Dual Beta Basket strategy
+- Monitored portfolio exposure, assessed market risk, and adjusted allocations using IBKR tools and live data
+- Referenced Goldman Sachs equity research and macroeconomic indicators to guide trade decisions and manage portfolio risk
 - Developing assessment frameworks
 - Providing one-on-one student mentoring
 - Contributing to curriculum improvement

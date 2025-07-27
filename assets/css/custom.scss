@@ -1,8 +1,20 @@
 // Custom styles for enhanced portfolio design
 
+// Professional color palette
+$primary-blue: #1e293b;
+$accent-blue: #2563eb;
+$accent-purple: #7c3aed;
+$accent-cyan: #0ea5e9;
+$neutral-bg: #f8fafc;
+$card-bg: #ffffff;
+$card-border: #e2e8f0;
+$heading: #1e293b;
+$link: #2563eb;
+$link-hover: #0ea5e9;
+
 // Animated gradient background
 .animated-gradient {
-  background: linear-gradient(-45deg, #6366f1, #3b82f6, #ec4899, #8b5cf6);
+  background: linear-gradient(-45deg, $primary-blue, $accent-blue, $accent-purple, $accent-cyan);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
 }
