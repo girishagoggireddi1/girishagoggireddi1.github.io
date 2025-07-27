@@ -1,53 +1,39 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
-# Projects Portfolio
+<div class="container">
+  <h1>Projects</h1>
+  <p class="lead">A showcase of key projects demonstrating my expertise in data analytics, business intelligence, and strategic consulting.</p>
 
-A showcase of key projects demonstrating expertise in data analytics, business intelligence, and strategic consulting.
+  <hr style="margin: 2rem 0;">
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; color: white; text-align: center;">
-  <h2 style="color: white; margin-bottom: 0.5rem;">Professional Impact</h2>
-  <p style="font-size: 1.1rem; margin: 0;">Delivering data-driven solutions that drive business growth and operational efficiency</p>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="card-content">
+        <h3>Financial Forecasting Dashboard</h3>
+        <p>Developed a comprehensive financial forecasting dashboard that transformed complex financial data into actionable insights for executive leadership, reducing reporting time by 70%.</p>
+        <p class="tech-stack"><strong>Technologies:</strong> Power BI, Excel, SQL, DAX</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-content">
+        <h3>M&A Research Automation</h3>
+        <p>Led a strategic initiative to automate M&A research processes, reducing research costs by 40% and improving turnaround time by 60% through automated data collection and analysis.</p>
+        <p class="tech-stack"><strong>Technologies:</strong> Python, Power BI, Web Scraping</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-content">
+        <h3>Lead Generation Campaigns</h3>
+        <p>Designed and executed data-driven marketing and lead generation strategies that boosted client revenue by 5% and contributed to a 3% growth in overall company earnings.</p>
+        <p class="tech-stack"><strong>Technologies:</strong> Excel, Power BI, Market Analysis</p>
+      </div>
+    </div>
+  </div>
 </div>
-
-## Featured Projects
-
-<div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
-
-### 📊 Financial Forecasting Dashboard
-**Duration**: 6 months | **Role**: Lead Developer  
-**Technologies**: Power BI, Excel, SQL, DAX
-
-Developed a comprehensive financial forecasting dashboard for executive leadership that transformed complex financial data into actionable insights.
-
-**Key Features:**
-- Real-time revenue and expense tracking
-- Automated forecasting models with 95% accuracy
-- Interactive drill-down capabilities for detailed analysis
-- Executive summary views for quick decision-making
-
-<div style="background: #f0f9ff; padding: 1rem; border-radius: 8px; border-left: 3px solid #0ea5e9;">
-<strong>📈 Impact:</strong> Reduced financial reporting time by 70% and improved forecast accuracy by 25%
-</div>
-
-</div>
-
----
-
-### M&A Research Automation
-**Duration**: 4 months | **Role**: Project Lead  
-**Technologies**: Python, Power BI, Web Scraping, Data Analysis
-
-Led a strategic initiative to automate M&A research processes for a consulting firm. The project involved:
-- Developing automated data collection systems
-- Creating standardized research templates
-- Building comprehensive market analysis dashboards
-- Implementing quality control measures
-
-**Impact**: Reduced research costs by 40% and improved research turnaround time by 60%.
 
 ---
 

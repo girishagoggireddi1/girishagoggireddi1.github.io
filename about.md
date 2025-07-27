@@ -1,58 +1,102 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-# About Me
+<div class="container">
+  <h1>About Me</h1>
+  <p class="lead">I'm a results-oriented professional with a strong foundation in finance, strategy, and data analytics. My goal is to leverage my skills to help organizations solve complex challenges and drive growth. I thrive in collaborative environments where I can turn data into actionable insights.</p>
 
-I'm **Girisha Goggireddi**, an MBA graduate from Stevens Institute of Technology specializing in analytics, finance, and strategy. I help organizations transform data into actionable business insights and navigate complex decision-making processes.
+  <hr style="margin: 2rem 0;">
 
-## Professional Experience
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">Sep 2024 - May 2025</p>
+        <h3>Teaching Assistant</h3>
+        <h4>Stevens Institute of Technology</h4>
+        <ul>
+          <li>Assisted professors in preparing and delivering course materials for 200+ students.</li>
+          <li>Provided one-on-one academic guidance to enhance understanding of complex business strategy concepts.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">Sep 2024 - Dec 2025</p>
+        <h3>MBA Consultant (Capstone Project)</h3>
+        <h4>Whitestone Analytics</h4>
+        <ul>
+          <li>Led a team to research and recommend Snov.io for M&A client research, improving efficiency.</li>
+          <li>Delivered an implementation roadmap that reduced client acquisition costs.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">Aug 2021 – Jul 2023</p>
+        <h3>Investment and Operations</h3>
+        <h4>Family-Owned Real Estate Business</h4>
+        <ul>
+          <li>Analyzed market data and legal documents to support land acquisition decisions.</li>
+          <li>Created Excel-based reports and financial models to inform deal execution.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">May 2020 - Jan 2021</p>
+        <h3>Business Development Analyst Intern</h3>
+        <h4>MyCaptain</h4>
+        <ul>
+          <li>Developed interactive Power BI dashboards to visualize key performance metrics.</li>
+          <li>Designed data-driven sales presentations that boosted revenue by 5%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-### Teaching Assistant, Stevens Institute of Technology (Sep 2024 - May 2025)
-- Assisted professors in preparing and delivering course materials, graded assignments, quizzes, and exams, and managed attendance and class participation of 200 students
-- Provided one-on-one academic guidance to enhance understanding of complex business strategy concepts
+  <h2 style="margin-top: 3rem;">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">Aug 2023 - May 2025</p>
+        <h3>Master of Business Administration (MBA), Analytics</h3>
+        <h4>Stevens Institute of Technology</h4>
+        <p>GPA: 3.9/4.0, GMAT: 730, Provost Scholarship, Beta Gamma Sigma Honor Society.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <p class="date">Jul 2018 - Aug 2021</p>
+        <h3>Bachelor of Business Administration, Finance</h3>
+        <h4>Vignan’s Foundation for Science, Technology & Research</h4>
+        <p>University Gold Medalist, Academic Topper (Rank 1), GPA: 4.0/4.0.</p>
+      </div>
+    </div>
+  </div>
 
-### MBA Consultant (Capstone Project), Whitestone Analytics (Sep 2024 - Dec 2025)
-- Led a team to conduct research, evaluate, recommend and implement Snov.io over Rocket Reach for cost-effective M&A client research and lead generation
-- Delivered client-ready implementation roadmap based on cost analysis, ROI, lead quality, integration analysis, reviews and features, resulting in improved client research efficiency and reduced acquisition costs
-
-### Investment and Operations, Family-Owned Real Estate Business (Aug 2021 – Jul 2023)
-- Analyzed market data, pricing trends, and legal documents to support land acquisition and resale decisions
-- Maintained cost tracking and assisted with forecasting for small-scale property investments
-- Created Excel-based reports and scenario models to inform deal execution and budget planning
-
-### Business Development Analyst Intern, MyCaptain (May 2020 - Jan 2021)
-- Developed interactive Power BI dashboards, visualizing key performance metrics such as customer acquisition costs and conversion rates and ROI by campaign
-- Designed data-driven sales presentations with Excel-based financial models, offering strategic insights that resulted in a 5% revenue boost from new clients and contributed to a 3% growth in overall company earnings
-
-## Education
-
-**Stevens Institute of Technology**  
-Master of Business Administration (MBA) in Analytics (STEM), Aug 2023 - May 2025, Hoboken, NJ  
-GPA: 3.9/4.0 | GMAT: 730 | Provost Scholarship ($20k, Merit-based) | Beta Gamma Sigma Honor Society  
-Coursework: Data Analytics and Machine Learning, Applied Analytics, Business Analytics, Multivariate Data Analysis, Corporate Finance, Strategic Management, Investment Management, Fixed Income, Fundamentals of Consulting
-
-**Vignan’s Foundation for Science, Technology & Research**  
-Bachelor of Business Administration, Finance, Jul 2018 - Aug 2021, Guntur, India  
-University Gold Medalist, Academic Topper (Rank 1), Student Leader (Dept of Management Studies), GPA: 4.0/4.0  
-Coursework: IT tools for business, Project Management, Business Mathematics, Statistics, Financial Derivatives, Strategic Financial Management, Micro and Macro Economics, Operations Research, Financial and Cost and Management Accounting
-
-## Skills & Certifications
-
-**Technical Capabilities:** SQL, Python, SAS, Tableau, Power BI, Advanced Excel, JIRA, Capital IQ, Pitchbook, PowerPoint, Visio, Teams, Securities Industry Essentials (SIE), Bloomberg
-
-**Business & Analytical Skills:** Agile/Scrum, Sprint Planning, Team Collaboration, Situational Intelligence, DCF & Financial Modeling, Bond Valuation, FP&A, Budgeting, Scenario & Sensitivity Analysis, Financial Statement Analysis, M&A and LBO Modelling, Product Management, Strategic Planning, Market & Competitor Analysis, Project Scheduling, Communication, Client Engagement
-
-## Professional Focus
-
-I specialize in transforming complex data into strategic business insights through:
-- **Data-Driven Decision Making**: Converting analytics into actionable recommendations
-- **Dashboard Development**: Creating intuitive visualizations for executive leadership
-- **Strategic Consulting**: Developing frameworks that align with business objectives
-- **Process Optimization**: Leveraging technology to improve efficiency and accuracy
-
-## Let's Connect
-
-I'm always interested in discussing new opportunities, collaborations, or sharing insights about business analytics and strategy. Feel free to reach out to explore how we can work together.
+  <h2 style="margin-top: 3rem;">Skills & Certifications</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="card-content">
+        <h3>Technical Capabilities</h3>
+        <p>SQL, Python, SAS, Tableau, Power BI, Advanced Excel, JIRA, Capital IQ, Pitchbook, PowerPoint, Visio, Teams, Securities Industry Essentials (SIE), Bloomberg.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-content">
+        <h3>Business & Analytical Skills</h3>
+        <p>Agile/Scrum, Sprint Planning, DCF & Financial Modeling, Bond Valuation, FP&A, Budgeting, M&A and LBO Modelling, Product Management, Strategic Planning, Market & Competitor Analysis.</p>
+      </div>
+    </div>
+  </div>
+</div>
