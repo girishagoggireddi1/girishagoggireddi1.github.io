@@ -544,27 +544,10 @@ footer {
   bottom: 0;
   width: 3px;
   background: var(--primary-gradient);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-  background: var(--card-bg) !important;
   padding: 2rem !important;
   border-radius: 15px !important;
   box-shadow: var(--shadow-light) !important;
-  transition: all 0.3s ease;
-}
-
-.timeline-item:hover {
-  transform: translateX(10px);
-  box-shadow: var(--shadow-medium) !important;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.5rem;
-  top: 2rem;
+  text-align: center !important;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -589,6 +572,74 @@ footer {
   color: var(--text-muted) !important;
   font-weight: 500 !important;
   margin-bottom: 1rem !important;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Colorful Skill Cards */
+.skill-analytics {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+.skill-consulting {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: white !important;
+}
+
+.skill-finance {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  color: white !important;
+}
+
+.skill-viz {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+  color: white !important;
+}
+
+.skill-powerbi {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+  color: white !important;
+}
+
+.skill-tableau {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important;
+  color: #333 !important;
+}
+
+.skill-sql {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%) !important;
+  color: #333 !important;
+}
+
+.skill-python {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+  color: #333 !important;
 }
 
 /* Footer */
